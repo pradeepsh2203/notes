@@ -1,0 +1,29 @@
+.flexbox {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin: 0 4px;
+}
+.flexbox input {
+	width: 300px;
+}
+.searchbox {
+	align-self: stretch;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 13px;
+	padding: 2px 10px;
+	overflow: hidden;
+	border-color: #b9b3b3;
+}
+
+.features {
+	display: grid;
+	grid-column-gap: 12px;
+	grid-auto-flow: column;
+	place-items: center;
+}
+
+.email {
+	color: rgb(56, 236, 140);
+}
