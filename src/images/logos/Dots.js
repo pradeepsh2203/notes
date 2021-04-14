@@ -14,6 +14,7 @@ function Dots(props) {
 				viewBox="0 0 92 92"
 				enable-background="new 0 0 92 92"
 				style={{ width: props.width, height: props.height }}
+				onClick={props.handleClick}
 			>
 				<path
 					id="XMLID_30_"

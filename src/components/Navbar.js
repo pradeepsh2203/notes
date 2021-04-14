@@ -3,11 +3,11 @@ import SearchBox from "./SearchBox";
 import Accessibility from "./Accessibility";
 import "../css/navbar.css";
 
-function Navbar() {
+function Navbar(props) {
 	return (
 		<div className="flexbox">
 			<SearchBox />
-			<Accessibility />
+			<Accessibility handleAdd={props.handleAdd} />
 			<div className="email">pradeepsharma.sharma095@gmail.com</div>
 		</div>
 	);

@@ -18,6 +18,7 @@ function Info(props) {
 					strokeWidth: "2px",
 					stroke: "#0000FF",
 				}}
+				onClick={props.handleClick}
 			>
 				<path d="M16 14 L16 23 M16 8 L16 10" />
 				<circle cx="16" cy="16" r="14" />

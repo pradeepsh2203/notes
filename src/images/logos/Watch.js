@@ -13,6 +13,7 @@ function Watch(props) {
 					width: props.width,
 					height: props.height,
 				}}
+				onClick={props.handleClick}
 			>
 				<path
 					fill-rule="evenodd"
