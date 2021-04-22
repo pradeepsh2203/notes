@@ -6,7 +6,7 @@ import "../css/navbar.css";
 function Navbar(props) {
 	return (
 		<div className="flexbox">
-			<SearchBox />
+			<SearchBox handleSubmit={props.handleSubmit} />
 			<Accessibility handleAdd={props.handleAdd} />
 			<div className="email">pradeepsharma.sharma095@gmail.com</div>
 		</div>

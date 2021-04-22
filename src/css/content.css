@@ -1,0 +1,25 @@
+.grid {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 5;
+	border-top: 1px gray solid;
+}
+
+.col-span-1 {
+	grid-column: 1 / 2;
+	overflow: auto;
+	border-right: 1px gray solid;
+}
+.col-span-2 {
+	padding: 3px;
+	grid-column: 2 / 5;
+}
+
+.text {
+	resize: none;
+	border-radius: 8px;
+	padding: 16px;
+	width: 96%;
+	height: 67vh;
+	overflow: auto;
+}

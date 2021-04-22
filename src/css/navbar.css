@@ -3,6 +3,7 @@
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	margin: 0 4px;
+	padding-bottom: 6px;
 }
 .flexbox input {
 	width: 300px;

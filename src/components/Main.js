@@ -6,16 +6,10 @@ class Main extends Component {
 	constructor() {
 		super();
 		this.state = {
-			notes: [
-				{
-					title: "",
-					description: "",
-					selected: false,
-					id: 0,
-				},
-			],
+			notes: [],
 		};
 		this.handleAdd = this.handleAdd.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 	handleAdd() {
 		var titile = "";
@@ -28,19 +22,33 @@ class Main extends Component {
 				id: this.state.notes.length === 0 ? 0 : this.state.notes.length,
 			};
 			console.log("Working!!!!!!!");
-			this.setState((prevstate) => {
-				prevstate.notes.push(TheNote);
-			});
-			console.log(this.state);
+			this.setState((prevstate) => prevstate.notes.push(TheNote));
 		}
 	}
 
+	handleSubmit(value) {
+		this.setState(function (prevState) {
+			for (var i = 0; i < prevState.notes.length; i++) {
+				if (prevState.notes[i].title === value)
+					prevState.notes[i].selected = true;
+				else prevState.notes[i].selected = false;
+			}
+
+			return {
+				notes: prevState.notes,
+			};
+		});
+	}
+
 	render() {
+		console.log(this.state);
 		return (
 			<div>
-				<Navbar handleAdd={this.handleAdd} />
-				<h1> Take on</h1>
-				<Content />
+				<Navbar
+					handleAdd={this.handleAdd}
+					handleSubmit={this.handleSubmit}
+				/>
+				<Content notes={this.state.notes} />
 			</div>
 		);
 	}
