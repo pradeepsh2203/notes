@@ -7,7 +7,10 @@ function Navbar(props) {
 	return (
 		<div className="flexbox">
 			<SearchBox handleSubmit={props.handleSubmit} />
-			<Accessibility handleAdd={props.handleAdd} />
+			<Accessibility
+				handleAdd={props.handleAdd}
+				handleDelete={props.handleDelete}
+			/>
 			<div className="email">pradeepsharma.sharma095@gmail.com</div>
 		</div>
 	);

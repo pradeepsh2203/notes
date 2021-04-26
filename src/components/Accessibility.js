@@ -31,7 +31,11 @@ function Accessibility(props) {
 			<Plus width="30px" height="30px" handleClick={props.handleAdd} />
 			<Info width="26px" height="26px" handleClick={InfoClicked} />
 			<Watch width="26px" height="26px" handleClick={Time} />
-			<Delete width="26px" height="26px" />
+			<Delete
+				width="26px"
+				height="26px"
+				handleClick={props.handleDelete}
+			/>
 			<Dots width="26px" height="26px" handleClick={Invalid} />
 		</div>
 	);

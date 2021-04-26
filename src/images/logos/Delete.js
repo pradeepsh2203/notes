@@ -16,6 +16,7 @@ function Delete(props) {
 					strokeWidth: "2px",
 					stroke: "#FF0000",
 				}}
+				onClick={props.handleClick}
 			>
 				<g>
 					<g>
